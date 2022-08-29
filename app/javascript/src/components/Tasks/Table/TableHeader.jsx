@@ -1,21 +1,24 @@
 import React from "react";
 
-import TableHeader from "./TableHeader";
-import TableRow from "./TableRow";
-
-const Table = ({ data }) => (
-  <div className="mt-10 flex flex-col ">
-    <div className="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-        <div className="border-b shadow md:custom-box-shadow overflow-hidden border-gray-200">
-          <table className="divide-y min-w-full divide-gray-200">
-            <TableHeader />
-            <TableRow data={data} />
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+const TableHeader = () => (
+  <thead>
+    <tr>
+      <th className="w-1" />
+      <th
+        className="bg-gray-50 px-6 py-3 text-left text-xs font-bold
+        uppercase leading-4 tracking-wider text-bb-gray-600 text-opacity-50"
+      >
+        Title
+      </th>
+      <th
+        className="bg-gray-50 px-6 py-3 text-left text-sm font-bold
+        leading-4 tracking-wider text-bb-gray-600 text-opacity-50"
+      >
+        Assigned To
+      </th>
+      <th className="bg-gray-50 px-6 py-3" />
+    </tr>
+  </thead>
 );
 
-export default Table;
+export default TableHeader;
