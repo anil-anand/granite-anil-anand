@@ -13,7 +13,9 @@ const Dashboard = ({ history }) => {
 
   const fetchTasks = async () => {
     try {
-      const { data: tasks } = await tasksApi.list();
+      const {
+        data: { tasks },
+      } = await tasksApi.list();
       setTasks(tasks);
       setLoading(false);
     } catch (error) {
